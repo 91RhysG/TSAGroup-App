@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using TSAGroup_Tec.Repos;
+using TSAGroup_Tec.Interfaces;
+using TSAGroup_Tec.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +11,8 @@ builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseInMemoryDatabase("AppInMemoryDb"));
+builder.Services.AddScoped<ITaskService, TaskService>();
+builder.Services.AddScoped<ITaskRepo, TaskRepo>();
 
 var app = builder.Build();
 
@@ -32,3 +36,5 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+public partial class Program { }

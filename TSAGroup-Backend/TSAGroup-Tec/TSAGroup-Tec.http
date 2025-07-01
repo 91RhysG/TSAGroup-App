@@ -1,16 +1,18 @@
 @TSAGroup_Tec_HostAddress = http://localhost:5230
+
 ### Get all tasks
-GET {{TSAGroup_Tec_HostAddress}}/task/
+
+GET {{TSAGroup_Tec_HostAddress}}/tasks/
 Accept: application/json
 
 ### Get a specific task by ID
 
-GET {{TSAGroup_Tec_HostAddress}}/task/1
+GET {{TSAGroup_Tec_HostAddress}}/tasks/1
 Accept: application/json
 
 ### Get a specific task by another ID
 
-GET {{TSAGroup_Tec_HostAddress}}/task/2
+GET {{TSAGroup_Tec_HostAddress}}/tasks/2
 Accept: application/json
 
 ###

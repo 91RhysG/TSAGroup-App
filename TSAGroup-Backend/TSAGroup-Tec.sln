@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TSAGroup-Tec", "TSAGroup-Tec\TSAGroup-Tec.csproj", "{9FBD108C-0083-4823-A085-193DB4ADE71B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TSAGroup-Tec.Tests", "TSAGroup-Tec.Tests\TSAGroup-Tec.Tests.csproj", "{870C418A-955C-4C0C-966E-A146AD4D516B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{9FBD108C-0083-4823-A085-193DB4ADE71B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9FBD108C-0083-4823-A085-193DB4ADE71B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9FBD108C-0083-4823-A085-193DB4ADE71B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{870C418A-955C-4C0C-966E-A146AD4D516B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{870C418A-955C-4C0C-966E-A146AD4D516B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{870C418A-955C-4C0C-966E-A146AD4D516B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{870C418A-955C-4C0C-966E-A146AD4D516B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

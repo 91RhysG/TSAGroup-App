@@ -5,7 +5,7 @@ using TaskModel = TSAGroup_Tec.Models.Task;
 namespace TSAGroup_Tec.Controllers;
 
 [ApiController]
-[Route("[controller]")]
+[Route("api/[controller]")]
 public class TasksController(ITaskService taskService) : ControllerBase
 {
     [HttpGet(Name = "GetTasks")]

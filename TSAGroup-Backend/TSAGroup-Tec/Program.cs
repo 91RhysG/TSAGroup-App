@@ -32,9 +32,16 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
-
+app.UseCors(policyBuilder =>
+{
+    policyBuilder.WithOrigins("http://localhost:5173")
+        .AllowAnyMethod()
+        .AllowAnyHeader();
+});
 app.MapControllers();
 
 app.Run();
 
-public partial class Program { }
+public partial class Program
+{
+}

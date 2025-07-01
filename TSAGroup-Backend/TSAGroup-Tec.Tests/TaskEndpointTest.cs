@@ -10,7 +10,7 @@ public class TaskEndpointTest(WebApplicationFactory<Program> factory) : IClassFi
     public async Task GetTasks_ReturnOk()
     {
         var client = factory.CreateClient();
-        var response = await client.GetAsync("/tasks");
+        var response = await client.GetAsync("/api/tasks");
         Assert.Equal(System.Net.HttpStatusCode.OK, response.StatusCode);
     }
 
@@ -18,7 +18,7 @@ public class TaskEndpointTest(WebApplicationFactory<Program> factory) : IClassFi
     public async Task GetTaskById_ReturnOk()
     {
         var client = factory.CreateClient();
-        var response = await client.GetAsync("/tasks/1");
+        var response = await client.GetAsync("/api/tasks/1");
         Assert.Equal(System.Net.HttpStatusCode.OK, response.StatusCode);
     }
 
@@ -34,7 +34,7 @@ public class TaskEndpointTest(WebApplicationFactory<Program> factory) : IClassFi
             Status = Enums.TaskStatus.InProgress,
             CreatedAt = DateTime.UtcNow
         };
-        var response = await client.PostAsJsonAsync("/tasks", task);
+        var response = await client.PostAsJsonAsync("/api/tasks", task);
         Assert.Equal(System.Net.HttpStatusCode.Created, response.StatusCode);
     }
 
@@ -52,7 +52,7 @@ public class TaskEndpointTest(WebApplicationFactory<Program> factory) : IClassFi
             UpdatedAt = DateTime.UtcNow,
             CompletedAt = DateTime.UtcNow
         };
-        var response = await client.PutAsJsonAsync("/tasks/100", task);
+        var response = await client.PutAsJsonAsync("/api/tasks/100", task);
         Assert.Equal(System.Net.HttpStatusCode.OK, response.StatusCode);
     }
 
@@ -60,7 +60,7 @@ public class TaskEndpointTest(WebApplicationFactory<Program> factory) : IClassFi
     public async Task DeleteTask_ReturnNoContent()
     {
         var client = factory.CreateClient();
-        var response = await client.DeleteAsync("/tasks/1");
+        var response = await client.DeleteAsync("/api/tasks/1");
         Assert.Equal(System.Net.HttpStatusCode.NoContent, response.StatusCode);
     }
 }

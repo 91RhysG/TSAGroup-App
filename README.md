@@ -12,4 +12,4 @@ Missing from the project is a `.env` file and this file requires the following i
 VITE_API_URL=http://localhost:5230/api
 `. This file should be in the root directory of the frontend application
 
-![Location for the .env file](image.png)
+<img src="images/env-location.png" alt="Location for the .env file" style="height: 30vw;">

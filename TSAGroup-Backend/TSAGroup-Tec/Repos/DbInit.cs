@@ -2,8 +2,15 @@
 
 namespace TSAGroup_Tec.Repos;
 
+/// <summary>
+/// The DbInit class is responsible for initializing the database with seed data.
+/// </summary>
 public static class DbInit
 {
+    /// <summary>
+    /// The SeedData method checks if the database is created and if there are any existing tasks.
+    /// </summary>
+    /// <param name="context">The connection to the database</param>
     public static void SeedData(AppDbContext context)
     {
         if (!context.Database.EnsureCreated()) return;

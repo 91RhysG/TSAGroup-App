@@ -1,12 +1,15 @@
-# React + Vite
+# TSA Group - Tech
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend component of the TSA Tech, it requires NodeJS installed to run as NPM pulls the packages required.
 
-Currently, two official plugins are available:
+## Installation
+This project requires a `.env` file that contains the URL of the server, it should resemble:
+`
+VITE_API_URL=/api`
+It exists within root directory of the project alongside public, src, and the node_modules.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<img src="images/env-location.png" alt="Location for the .env file" style="height: 30vw;">
 
-## Expanding the ESLint configuration
+## Requirements
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The key requirements that this application meets is basic validation, and a toast animation for success or failure depending on the outcome of the request to the server.

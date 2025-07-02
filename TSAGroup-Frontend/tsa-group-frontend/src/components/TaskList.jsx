@@ -1,34 +1,21 @@
-import { useEffect, useState } from "react";
-import { fetchTasks } from "../api/tasks";
+import Task from "./Task";
 
-function TaskList() {
-  const [tasks, setTasks] = useState([]);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    async function loadTasks() {
-      try {
-        const data = await fetchTasks();
-        setTasks(data);
-      } catch (err) {
-        setError(err.message);
-      }
-    }
-    loadTasks();
-  }, []);
-
-  if (error) return <div>Error: {error}</div>;
-  if (!tasks.length) return <div>No tasks available</div>;
-
+/**
+ * TaskList component displays a list of tasks.
+ *
+ * @param {Object} param0 - The props object.
+ * @param {Array} param0.tasks - The array of task objects to display.
+ * @param {Function} param0.onTaskSelect - The function to call when a task is selected.
+ * @returns {JSX.Element} The rendered task list component.
+ */
+function TaskList({ tasks, onTaskSelect }) {
+  if (!tasks) return <div>No tasks available</div>;
   return (
-    <ul>
+    <div className="flex flex-wrap gap-4 p-4 justify-between">
       {tasks.map((task) => (
-        <li key={task.id}>
-          {task.name} {task.description} {task.status} {task.createdAt}{" "}
-          {task.updatedAt ?? ""}
-        </li>
+        <Task key={task.Id ?? task.id} task={task} onClick={() => onTaskSelect(task)} />
       ))}
-    </ul>
+    </div>
   );
 }
 

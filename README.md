@@ -32,6 +32,7 @@ Navigating to
 http:localhost:5173
 ```
 You should see the landing page
+
 <img src="images/landing-page.png" alt="The landing page for the frontend application" style="height: 30vw;">
 
 ### Backend
